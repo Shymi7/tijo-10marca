@@ -1,5 +1,16 @@
 public class Main {
+
+    public static int sumOfNaturals(int n) {
+        if (n == 1) {
+            return 1;
+        } else {
+            return n + sumOfNaturals(n - 1);
+        }
+    }
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        int n = 5;
+        int sum = sumOfNaturals(n);
+        System.out.println("Suma pierwszych " + n + " liczb naturalnych to: " + sum);
     }
 }
